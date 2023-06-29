@@ -7,3 +7,11 @@ stg environment for Topick, overriding the configuration for Topick and deploys 
 - [Repository](https://github.com/ExoKomodo/topick-stg)
 - [Topick UI](https://stg.topick.fyi)
 
+## Updating topick
+
+Run `update.sh`
+
+```shell
+./update.sh
+```
+
