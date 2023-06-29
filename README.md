@@ -1,9 +1,9 @@
-# Topick - <ENV>
+# Topick - stg
 
-<ENV> environment for Topick, overriding the configuration for Topick and deploys it to <ENV>
+stg environment for Topick, overriding the configuration for Topick and deploys it to stg
 
 ## Important Links
 
-- [Repository](https://github.com/ExoKomodo/topick-<ENV>)
-- [Topick UI](https://<ENV>.topick.fyi)
+- [Repository](https://github.com/ExoKomodo/topick-stg)
+- [Topick UI](https://stg.topick.fyi)
 
