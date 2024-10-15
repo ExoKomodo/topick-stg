@@ -7,7 +7,7 @@ environment:
 # https://builds.sr.ht/secrets
 secrets:
   # github - exokomodo-bot ssh key
-  - efe38d9a-c55d-4fd1-85ad-1fa3e64ce68c
+  - e5f998d1-5e09-4698-a07c-375ec94e2a00
 tasks:
   - ssh-config: |-
       touch ~/.ssh/config
