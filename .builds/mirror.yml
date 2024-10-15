@@ -1,0 +1,27 @@
+image: alpine/latest
+sources:
+  - git@git.sr.ht:~exokomodo/MYREPO
+environment:
+  REPO: MYREPO
+  TARGET: git@github.com:exokomodo/MYREPO
+# https://builds.sr.ht/secrets
+secrets:
+  # github - exokomodo-bot ssh key
+  - efe38d9a-c55d-4fd1-85ad-1fa3e64ce68c
+tasks:
+  - ssh-config: |-
+      touch ~/.ssh/config
+      cat <<EOF >> ~/.ssh/config
+      Host github.com
+        User git
+        IdentityFile ~/.ssh/id_rsa
+      EOF
+  - ssh-keyscan: |-
+      touch ~/.ssh/known_hosts
+      ssh-keyscan github.com >> ~/.ssh/known_hosts
+  - add-remote: |-
+      cd ${REPO}
+      git remote add target ${TARGET}
+  - mirror: |-
+      cd ${REPO}
+      git push --force target --tags "refs/remotes/origin/*:refs/heads/*"
