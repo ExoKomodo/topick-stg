@@ -1,9 +1,9 @@
 image: alpine/latest
 sources:
-  - git@git.sr.ht:~exokomodo/MYREPO
+  - git@git.sr.ht:~exokomodo/topick-stg
 environment:
-  REPO: MYREPO
-  TARGET: git@github.com:exokomodo/MYREPO
+  REPO: topick-stg
+  TARGET: git@github.com:exokomodo/topick-stg
 # https://builds.sr.ht/secrets
 secrets:
   # github - exokomodo-bot ssh key
